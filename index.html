@@ -5,7 +5,7 @@
 <script src="/socket.io/socket.io.js"></script>
 </head>
 <body>
-<div id="memechat"> <p id="p">Vervida Chat</p>
+<div id="vervidachat"> <p id="p">Vervida Chat</p>
 <br>
 <br>
 <div id="holder">
@@ -40,10 +40,10 @@ if(data.msg.length > 0){
 $chat.append('<br>'  +'<div id="circle"> ' + '<textarea id="t" readonly>' + data.msg + '</textarea>'+' </div>' + '<br>' );
 }
 });
-socket.on("new memer", function(data){
+socket.on("new user", function(data){
 $people.append('<br>'  +'<div id="circle1"> ' + ' </div>' + '<br>' );
 });
-socket.on("memer left", function(data){
+socket.on("user left", function(data){
 $("#circle1").remove();
 });
 });
